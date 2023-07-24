@@ -1,0 +1,14 @@
+{
+  "name": "oracle-cypress",
+  "version": "1.0.0",
+  "description": "Test Project Oracle",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "author": "Matheus Carmo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.2"
+  }
+}
