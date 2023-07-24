@@ -15,16 +15,6 @@ describe('QA Application', () => {
     cy.get('tr[data-id="10"] > .u-tE').should('contain', '20')
   })
 
-  it.only('Access table and change the quantity of order 10 to 20', () => {
-    cy.intercept('POST', '**pls/apex/wwv_flow.ajax?p_context=qa-application/home/**')
-      .as('postSave')
-    cy.wait('@postSave')
-    cy.get('polygon[aria-label="Series: Store A; Group: Grapes; Value: 52. Selected"]')
-      //.find('polygon[fill="#FFFFFF"]')
-      .should('contain', 'Series: Store A; Group: Grapes; Value: 52.')
-
-  })
-
   it('Access table and change the location of order 10 to Deli', () => {
     cy.intercept('POST', '**/pls/apex/wwv_flow.ajax?p_context=qa-application/home/**')
       .as('postLoadSearch')
