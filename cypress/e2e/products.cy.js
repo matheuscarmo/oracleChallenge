@@ -1,8 +1,8 @@
 describe('QA Application', () => {
   beforeEach(() => {
     cy.visit('https://apex.oracle.com/pls/apex/r/danmende/qa-application/home')
-    cy.get('input[placeholder="Username"]').type('QA_USER')
-    cy.get('input[placeholder="Password"]').type('qatest123', { log: false })
+    cy.get('input[placeholder="Username"]').type(Cypress.env('user_name'))
+    cy.get('input[placeholder="Password"]').type(Cypress.env('user_password'), { log: false })
     cy.contains('Sign In').click()
   })
   it('Access table and change the quantity of order 10 to 20', () => {
